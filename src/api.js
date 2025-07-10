@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://football-backend-2un2.onrender.com', // change to your backend URL
+  baseURL: 'https://football-backend-2un2.onrender.com/api', // change to your backend URL
+  API.post('/auth/signup', formData);
 });
 
 API.interceptors.request.use((req) => {
