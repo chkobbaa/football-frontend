@@ -3,7 +3,7 @@ import API from '../api';
 import { useNavigate, Link } from 'react-router-dom';
 
 function Signup() {
-  const [form, setForm] = useState({ name: '', email: '', password: '' });
+  const [form, setForm] = useState({ name: '', number: '', password: '' });
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function Signup() {
       alert('Signup successful! Please log in.');
       navigate('/login');
     } catch (err) {
-      alert('Signup failed. Email might already be in use.');
+      alert('Signup failed. Number might already be in use.');
     }
   };
 
@@ -33,11 +33,11 @@ function Signup() {
         onChange={(e) => setForm({ ...form, name: e.target.value })}
       />
       <input
-        type="email"
-        placeholder="Email"
-        value={form.email}
+        type="text"
+        placeholder="Phone Number"
+        value={form.number}
         required
-        onChange={(e) => setForm({ ...form, email: e.target.value })}
+        onChange={(e) => setForm({ ...form, number: e.target.value })}
       />
       <input
         type="password"
